@@ -1,0 +1,34 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.always.learner'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//MySQL
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+
+	//SpringData
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	//Add Swagger dependencies
+	compile('io.springfox:springfox-swagger2:2.9.2')
+	compile('io.springfox:springfox-swagger-ui:2.9.2')
+	compile group: 'io.swagger.core.v3', name: 'swagger-maven-plugin', version: '2.1.3'
+
+}
+
+test {
+	useJUnitPlatform()
+}

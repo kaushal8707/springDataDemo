@@ -1,0 +1,12 @@
+server:
+    port: 8083
+    servlet:
+        context-path: /springDataDemo
+spring:
+    application:
+        name: spring-data-demo
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: Guidewire@2019
+        url: jdbc:mysql://localhost:3306/alwayslearning
+        username: root
